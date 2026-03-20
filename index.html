@@ -64,10 +64,10 @@
         
         /* Category Scroll Sections */
         .category-container {
-            background: linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9)), url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?q=80&w=2076&auto=format&fit=crop');
+            background: linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9)), url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?q=60&w=1200&fm=webp');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: scroll;
             padding-bottom: 40px;
         }
 
@@ -79,50 +79,18 @@
         .cat-card:hover { border-color: var(--gold); transform: translateY(-3px); }
         .cat-card span { position: absolute; bottom: 8px; left: 10px; color: white; font-weight: 700; z-index: 2; font-size: 0.75rem; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
 
-        /* FIXED COMPACT MOBILE MENU ADJUSTMENTS */
         @media (max-width: 992px) {
             .nav-links { 
-                position: absolute; 
-                top: 75px; 
-                right: 5%; 
-                width: 200px; 
-                background: white; 
-                flex-direction: column; 
-                gap: 0; 
-                padding: 10px 0; 
-                border-radius: 12px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-                border: 1px solid rgba(0,0,0,0.05);
-                height: auto;
-                
-                /* Transition State */
-                visibility: hidden;
-                opacity: 0;
-                transform: translateY(-10px);
+                position: absolute; top: 75px; right: 5%; width: 200px; background: white; 
+                flex-direction: column; gap: 0; padding: 10px 0; border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.05);
+                visibility: hidden; opacity: 0; transform: translateY(-10px);
                 transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             }
-
-            .nav-links.active { 
-                visibility: visible;
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            .nav-links a { 
-                color: var(--dark) !important; 
-                padding: 15px 20px;
-                width: 100%;
-                border-bottom: 1px solid #f1f5f9;
-                font-size: 0.9rem;
-                text-align: left;
-            }
+            .nav-links.active { visibility: visible; opacity: 1; transform: translateY(0); }
+            .nav-links a { color: var(--dark) !important; padding: 15px 20px; width: 100%; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; text-align: left; }
             .nav-links a:last-child { border-bottom: none; }
-
             .menu-toggle { display: flex; }
-            .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); background: var(--dark) !important; }
-            .menu-toggle.active span:nth-child(2) { opacity: 0; }
-            .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); background: var(--dark) !important; }
-            
             #cartSidebar { width: 100%; }
             .reservation-card { grid-template-columns: 1fr !important; }
         }
@@ -130,7 +98,7 @@
         /* Menu Section */
         #menu { 
             padding: 100px 5%; 
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop'); 
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=60&w=1200&fm=webp'); 
             background-attachment: fixed;
             background-size: cover;
             color: white; 
@@ -141,25 +109,18 @@
         /* Reservations Section */
         #reserve {
             padding: 120px 5%; 
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=60&w=1200&fm=webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         .reservation-card { 
-            background: rgba(255, 255, 255, 0.95); 
-            backdrop-filter: blur(10px);
-            max-width: 800px; 
-            margin: 0 auto; 
-            border-radius: 20px; 
-            padding: 40px; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 20px; 
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            max-width: 800px; margin: 0 auto; border-radius: 20px; padding: 40px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3); display: grid; 
+            grid-template-columns: 1fr 1fr; gap: 20px; 
         }
         .reservation-card input { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; font-family: inherit; }
-
         .fab-wa { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: white; z-index: 1500; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
     </style>
 </head>
@@ -205,18 +166,18 @@
         <p class="section-label">Gourmet Cuisines</p>
         <div class="category-scroll">
             <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('fish.png')" onclick="filterMenu('sea')"><span>Sea Food</span></div>
-            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1544025162-d76694265947?w=400')" onclick="filterMenu('meat')"><span>Grilled Meats</span></div>
-            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400')" onclick="filterMenu('veg')"><span>Vegetarian</span></div>
-            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400')" onclick="filterMenu('dessert')"><span>Desserts</span></div>
+            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=60&fm=webp')" onclick="filterMenu('meat')"><span>Grilled Meats</span></div>
+            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=60&fm=webp')" onclick="filterMenu('veg')"><span>Vegetarian</span></div>
+            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&q=60&fm=webp')" onclick="filterMenu('dessert')"><span>Desserts</span></div>
         </div>
 
         <p class="section-label">Premium Beverages</p>
         <div class="category-scroll">
-            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400')" onclick="filterMenu('cocktails')"><span>Cocktails</span></div>
-            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400')" onclick="filterMenu('mocktails')"><span>Mocktails</span></div>
-            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400')" onclick="filterMenu('soda')"><span>Sodas & Juice</span></div>
-            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400')" onclick="filterMenu('wine')"><span>Fine Wines</span></div>
-            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400')" onclick="filterMenu('kids')"><span>Kids' Corner</span></div>
+            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&q=60&fm=webp')" onclick="filterMenu('cocktails')"><span>Cocktails</span></div>
+            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=60&fm=webp')" onclick="filterMenu('mocktails')"><span>Mocktails</span></div>
+            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=60&fm=webp')" onclick="filterMenu('soda')"><span>Sodas & Juice</span></div>
+            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&q=60&fm=webp')" onclick="filterMenu('wine')"><span>Fine Wines</span></div>
+            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=60&fm=webp')" onclick="filterMenu('kids')"><span>Kids' Corner</span></div>
         </div>
     </div>
 
@@ -244,36 +205,37 @@
 
     <script>
         const products = [
-            // FOODS
-            { id: 1, cat: 'sea', name: 'Grilled Lobster', price: 45.00, img: 'https://images.unsplash.com/photo-1559742811-82410b451b94?w=800', desc: 'Garlic butter whole lobster tail.' },
-            { id: 2, cat: 'sea', name: 'Seafood Risotto', price: 20.00, img: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600', desc: 'Saffron rice with jumbo prawns.' },
-            { id: 3, cat: 'sea', name: 'Atlantic Salmon', price: 22.00, img: 'https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=600', desc: 'Pan-seared with herb gremolata.' },
-            { id: 4, cat: 'sea', name: 'Crispy Calamari', price: 18.00, img: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600', desc: 'Tender rings with spicy aioli.' },
-            { id: 5, cat: 'meat', name: 'T-Bone Steak', price: 28.00, img: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600', desc: '500g Kenyan beef with rosemary.' },
-            { id: 6, cat: 'meat', name: 'Lamb Chops', price: 32.00, img: 'https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=600', desc: 'Herb-crusted with mint glaze.' },
-            { id: 7, cat: 'meat', name: 'Roasted Chicken', price: 18.00, img: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600', desc: 'Organic half-chicken roasted fresh.' },
-            { id: 8, cat: 'meat', name: 'Honey Pork Ribs', price: 25.00, img: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600', desc: 'Slow-cooked with smoky BBQ.' },
-            { id: 9, cat: 'veg', name: 'Avocado Diplomat', price: 12.00, img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600', desc: 'Sourdough & organic poached eggs.' },
-            { id: 10, cat: 'veg', name: 'Truffle Pasta', price: 16.00, img: 'https://images.unsplash.com/photo-1473093226795-af9932fe5856?w=600', desc: 'Creamy sauce with mushrooms.' },
-            { id: 11, cat: 'veg', name: 'Greek Salad', price: 10.00, img: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600', desc: 'Premium feta and olives.' },
-            { id: 12, cat: 'veg', name: 'Garden Pizza', price: 14.00, img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600', desc: 'Fresh basil and vegetables.' },
-            { id: 13, cat: 'dessert', name: 'Berry Cheesecake', price: 10.00, img: 'https://images.unsplash.com/photo-1524351159678-b441e2371d9a?w=600', desc: 'Velvety New York style.' },
-            { id: 14, cat: 'dessert', name: 'Choco Fondant', price: 12.00, img: 'https://images.unsplash.com/photo-1541923371-360620c4553b?w=600', desc: 'Warm heart with vanilla cream.' },
-            { id: 15, cat: 'dessert', name: 'Classic Tiramisu', price: 9.00, img: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600', desc: 'Espresso-soaked Italian delight.' },
-            { id: 16, cat: 'dessert', name: 'Tropical Platter', price: 8.00, img: 'https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=600', desc: 'Freshly sliced seasonal fruits.' },
+            // FOOD SELECTION
+            { id: 1, cat: 'sea', name: 'Grilled Lobster', price: 45.00, img: 'https://images.unsplash.com/photo-1559742811-82410b451b94?w=400&q=60&fm=webp', desc: 'Garlic butter whole lobster tail.' },
+            { id: 2, cat: 'sea', name: 'Seafood Risotto', price: 20.00, img: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=60&fm=webp', desc: 'Saffron rice with jumbo prawns.' },
+            { id: 3, cat: 'sea', name: 'Atlantic Salmon', price: 22.00, img: 'https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400&q=60&fm=webp', desc: 'Pan-seared with herb gremolata.' },
+            { id: 4, cat: 'sea', name: 'Crispy Calamari', price: 18.00, img: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=60&fm=webp', desc: 'Tender rings with spicy aioli.' },
+            { id: 5, cat: 'meat', name: 'T-Bone Steak', price: 28.00, img: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=60&fm=webp', desc: '500g Kenyan beef with rosemary.' },
+            { id: 6, cat: 'meat', name: 'Lamb Chops', price: 32.00, img: 'https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=400&q=60&fm=webp', desc: 'Herb-crusted with mint glaze.' },
+            { id: 7, cat: 'meat', name: 'Roasted Chicken', price: 18.00, img: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=400&q=60&fm=webp', desc: 'Organic half-chicken roasted fresh.' },
+            { id: 8, cat: 'meat', name: 'Honey Pork Ribs', price: 25.00, img: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&q=60&fm=webp', desc: 'Slow-cooked with smoky BBQ.' },
+            { id: 9, cat: 'veg', name: 'Avocado Diplomat', price: 12.00, img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&q=60&fm=webp', desc: 'Sourdough & organic poached eggs.' },
+            { id: 10, cat: 'veg', name: 'Truffle Pasta', price: 16.00, img: 'https://images.unsplash.com/photo-1473093226795-af9932fe5855?w=400&q=60&fm=webp', desc: 'Creamy sauce with mushrooms.' },
+            { id: 11, cat: 'veg', name: 'Greek Salad', price: 10.00, img: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=60&fm=webp', desc: 'Premium feta and olives.' },
+            { id: 12, cat: 'veg', name: 'Garden Pizza', price: 14.00, img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=60&fm=webp', desc: 'Fresh basil and vegetables.' },
+            { id: 13, cat: 'dessert', name: 'Berry Cheesecake', price: 10.00, img: 'https://images.unsplash.com/photo-1524351159678-b441e2371d9a?w=400&q=60&fm=webp', desc: 'Velvety New York style.' },
+            { id: 14, cat: 'dessert', name: 'Choco Fondant', price: 12.00, img: 'https://images.unsplash.com/photo-1541923371-360620c4553b?w=400&q=60&fm=webp', desc: 'Warm heart with vanilla cream.' },
+            { id: 15, cat: 'dessert', name: 'Classic Tiramisu', price: 9.00, img: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&q=60&fm=webp', desc: 'Espresso-soaked Italian delight.' },
+            { id: 16, cat: 'dessert', name: 'Tropical Platter', price: 8.00, img: 'https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=400&q=60&fm=webp', desc: 'Freshly sliced seasonal fruits.' },
 
-            // COCKTAILS
-            { id: 17, cat: 'cocktails', name: 'Passion Martini', price: 14.00, img: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600', desc: 'Vodka, fresh passion, and lime.' },
-            { id: 18, cat: 'cocktails', name: 'Classic Mojito', price: 12.00, img: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600', desc: 'Mint, lime, and white rum.' },
-
-            // MOCKTAILS
-            { id: 21, cat: 'mocktails', name: 'Virgin Colada', price: 8.00, img: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=600', desc: 'Coconut cream and pineapple juice.' },
-            
-            // WINE
-            { id: 29, cat: 'wine', name: 'Merlot', price: 40.00, img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600', desc: 'Smooth red with berry notes.' },
-            
-            // KIDS
-            { id: 31, cat: 'kids', name: 'Oreo Milkshake', price: 7.50, img: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600', desc: 'Creamy vanilla with cookies.' }
+            // BEVERAGE SELECTION
+            { id: 17, cat: 'cocktails', name: 'Passion Martini', price: 14.00, img: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=400&q=60&fm=webp', desc: 'Vodka, fresh passion, and lime.' },
+            { id: 18, cat: 'cocktails', name: 'Classic Mojito', price: 12.00, img: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=60&fm=webp', desc: 'Mint, lime, and white rum.' },
+            { id: 19, cat: 'cocktails', name: 'Margarita Gold', price: 13.00, img: 'https://images.unsplash.com/photo-1544145945-f904253d0c7b?w=400&q=60&fm=webp', desc: 'Premium tequila and citrus.' },
+            { id: 20, cat: 'cocktails', name: 'Whisky Sour', price: 15.00, img: 'https://images.unsplash.com/photo-1551538597-2742a124b38d?w=400&q=60&fm=webp', desc: 'Bourbon with frothy egg white.' },
+            { id: 21, cat: 'mocktails', name: 'Virgin Colada', price: 8.00, img: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=400&q=60&fm=webp', desc: 'Coconut cream and pineapple juice.' },
+            { id: 22, cat: 'mocktails', name: 'Sunrise Fizz', price: 7.00, img: 'https://images.unsplash.com/photo-1543158032-4d569610266e?w=400&q=60&fm=webp', desc: 'Orange, grenadine and soda.' },
+            { id: 23, cat: 'soda', name: 'Cold Coke/Fanta', price: 3.00, img: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&q=60&fm=webp', desc: '300ml Glass bottle.' },
+            { id: 24, cat: 'soda', name: 'Fresh Mango Juice', price: 5.00, img: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&q=60&fm=webp', desc: 'Organic blended mangoes.' },
+            { id: 25, cat: 'soda', name: 'Lemonade', price: 4.50, img: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=60&fm=webp', desc: 'Sparkling home-made lemon.' },
+            { id: 29, cat: 'wine', name: 'Merlot', price: 40.00, img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&q=60&fm=webp', desc: 'Smooth red with berry notes.' },
+            { id: 30, cat: 'wine', name: 'Chardonnay', price: 45.00, img: 'https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=400&q=60&fm=webp', desc: 'Crisp white wine.' },
+            { id: 31, cat: 'kids', name: 'Oreo Milkshake', price: 7.50, img: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=60&fm=webp', desc: 'Creamy vanilla with cookies.' }
         ];
 
         let cart = [];
@@ -298,7 +260,10 @@
             products.filter(p => p.cat === category).forEach(p => {
                 grid.innerHTML += `
                 <div class="menu-item">
-                    <img src="${p.img}" style="width:100%; height:200px; object-fit:cover;" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600'">
+                    <img src="${p.img}" 
+                         loading="lazy" 
+                         style="width:100%; height:200px; object-fit:cover;" 
+                         onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=60&fm=webp'">
                     <div style="padding:20px; flex-grow:1; display:flex; flex-direction:column;">
                         <h4>${p.name}</h4>
                         <p style="font-size:0.8rem; color:#666; margin-bottom:auto;">${p.desc}</p>
