@@ -79,15 +79,50 @@
         .cat-card:hover { border-color: var(--gold); transform: translateY(-3px); }
         .cat-card span { position: absolute; bottom: 8px; left: 10px; color: white; font-weight: 700; z-index: 2; font-size: 0.75rem; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
 
-        /* Mobile Adjustments */
+        /* FIXED COMPACT MOBILE MENU ADJUSTMENTS */
         @media (max-width: 992px) {
-            .nav-links { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--glass); flex-direction: column; align-items: center; justify-content: center; transition: 0.4s; }
-            .nav-links.active { right: 0; }
-            .nav-links a { color: var(--dark); font-size: 1.5rem; }
+            .nav-links { 
+                position: absolute; 
+                top: 75px; 
+                right: 5%; 
+                width: 200px; 
+                background: white; 
+                flex-direction: column; 
+                gap: 0; 
+                padding: 10px 0; 
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+                border: 1px solid rgba(0,0,0,0.05);
+                height: auto;
+                
+                /* Transition State */
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .nav-links.active { 
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .nav-links a { 
+                color: var(--dark) !important; 
+                padding: 15px 20px;
+                width: 100%;
+                border-bottom: 1px solid #f1f5f9;
+                font-size: 0.9rem;
+                text-align: left;
+            }
+            .nav-links a:last-child { border-bottom: none; }
+
             .menu-toggle { display: flex; }
-            .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+            .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); background: var(--dark) !important; }
             .menu-toggle.active span:nth-child(2) { opacity: 0; }
-            .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+            .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); background: var(--dark) !important; }
+            
             #cartSidebar { width: 100%; }
             .reservation-card { grid-template-columns: 1fr !important; }
         }
@@ -169,7 +204,7 @@
     <div class="category-container">
         <p class="section-label">Gourmet Cuisines</p>
         <div class="category-scroll">
-            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://assets3.thrillist.com/v1/image/3097381/1200x600/scale;;webp=auto;jpeg_quality=85.jpg')" onclick="filterMenu('sea')"><span>Sea Food</span></div>
+            <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('fish.png')" onclick="filterMenu('sea')"><span>Sea Food</span></div>
             <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1544025162-d76694265947?w=400')" onclick="filterMenu('meat')"><span>Grilled Meats</span></div>
             <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400')" onclick="filterMenu('veg')"><span>Vegetarian</span></div>
             <div class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400')" onclick="filterMenu('dessert')"><span>Desserts</span></div>
